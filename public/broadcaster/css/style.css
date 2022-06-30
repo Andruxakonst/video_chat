@@ -1,0 +1,118 @@
+h1 {
+    margin: 0 0 1em 0;
+}
+h2 {
+    margin: 0 0 0.5em 0;
+}
+button {
+    /* width: 5.2em; */
+    height: 30px;
+}
+textarea{
+    color: #444;
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    height: 7.0em;
+    padding: 0.5em;
+}
+video{
+    max-width: 1024px;
+    width: 98%;
+    margin: 0 auto;
+}
+#myVideo{
+    box-sizing: border-box;
+    border: 1px solid #b9b9b9;
+}
+/* #remoteVideo{
+    max-width: 640px;
+    max-height: 480px;
+    box-sizing: border-box;
+    border: 1px solid #b9b9b9;
+} */
+#text_video{
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    opacity: 0.8;
+    bottom: 0;
+}
+#conteyner{
+    display: flex;
+    flex-direction: column;
+}
+.video_container{
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* max-width: 640px;
+    max-height: 480px; */
+    margin: 5px auto;
+}
+#texttestvideo{
+    text-align: center;
+    padding-top: 10px;
+}
+ /*
+#remote{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+#avatar{
+    background-color: #d1d0d0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}*/
+#controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+#buttons{
+    margin: 5px auto;
+}
+#sendReceive{
+    margin: 0 0 1em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#send, #receive{
+    width: 50%;
+}
+textarea{
+    width: 95%;
+}
+#data{
+    margin: 5px auto;
+    width: 100%;
+}
+#data textarea{
+    width: 98%;
+}
+#otkl_zritel{
+    color: #fff;
+    background-color: red;
+}
+#sever_set{
+    text-align: center;
+}
+#sever_set_btn{
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+}

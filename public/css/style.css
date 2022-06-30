@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    width: 500px;
+}
+.box{
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+button, input{
+    padding: 5px 0;
+    width: 300px;
+    margin: 3px auto;
+}
+#about{
+    text-align: center;
+}
+#buttons{
+    display: flex;
+    flex-direction: column;
+}

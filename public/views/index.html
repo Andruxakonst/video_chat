@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Simplest possible examples of HTML, CSS and JavaScript.">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+<meta itemprop="name" content="simpl.info: simplest possible examples of HTML, CSS and JavaScript">
+<meta id="theme-color" name="theme-color" content="#fff">
+<title>videoConf</title>
+<link rel="stylesheet" href="views/css/style.css">
+
+</head>
+<body>
+  <div id="container">
+    <div id="remote">
+      <video autoplay="" playsinline="" id="remoteVideo" poster="/img/nosignal.jpg"></video>
+      <div id="avatar"><img src="" alt="" id="avatar-img"></div>
+      <div id="text_video"></div>
+    </div>
+    <hr>
+    <div id="controls">
+      <div id="buttons">
+        <label for="uuid">ID трансляции</label><br>
+        <select name="uuid" id="uuid"></select><br>
+        <button id="startButton">Start</button><!--<button id="startButton" disabled>Start</button> -->
+        <button id="closeButton" disabled>Stop</button>
+      </div>
+      <div id="sendReceive">
+        <div id="send">
+          <h2>Текст для отправления</h2>
+          <textarea id="dataChannelSend" disabled placeholder="Ввести текст, нажать 'отправить' для отправки."></textarea>
+          <button id="sendButton" disabled>Send</button>
+        </div>
+        <div id="receive">
+          <h2>Полученный текст</h2>
+          <textarea id="dataChannelReceive" disabled></textarea>
+        </div>
+      </div>
+      <div id="data">
+        <h2>Log</h2>
+        <textarea id="dataAll" disabled></textarea>
+      </div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.1.4/adapter.min.js" integrity="sha512-FZkQmTcqSzV2aNpWszYA/pPUISx6QjI60lKGwnIsfNFCGqUB7gcobQ9StH3hQCKFN92md3fCaXLzzSpoFat57A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script> -->
+    <script src="views/js/main.js" async></script>
+</body>
+</html>

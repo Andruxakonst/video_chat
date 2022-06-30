@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Simplest possible examples of HTML, CSS and JavaScript.">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+<meta itemprop="name" content="simpl.info: simplest possible examples of HTML, CSS and JavaScript">
+<meta id="theme-color" name="theme-color" content="#fff">
+<title>videoConf</title>
+<link rel="stylesheet" href="broadcaster/css/style.css">
+
+</head>
+<body>
+  <div id="container">
+    <div class="video_container">
+      <video autoplay playsinline muted id="myVideo" poster="/img/nosignal.jpg"></video>
+      <div id="text_video"></div>
+    </div>
+    <div class="video_container">
+      <h2 id="texttestvideo">Видео для тестовой трансляции</h2>
+      <video id='testvideo' controls loop src="broadcaster/video/chrome.mp4"></video>
+    </div>
+    <div id="sever_set">
+      <h3><b>Настройки сервера</b></h3>
+      <div id="sever_set_btn">
+          <div>
+          <p><b>Выбор TURN сервера</b></p>
+          <input id = 'servAmazon' type="radio" name="server"  value="amazon"><label for="servAmazon">Amazon</label>
+          <input id = 'servUpTaxi' type="radio" name="server"checked value="upTaxi"><label for="servUpTaxi">upTaxi</label>
+        </div>
+        <div>
+          <p><b>Выбор источника сигнала</b></p>
+          <input type="checkbox" name="isScreen" id="isScreen">
+          <label for="isScreen">Транслировать экран</label>
+          <input type="checkbox" name="isVideo" id="isVideo">
+          <label for="isVideo">Транслировать видео</label>
+        </div>
+      </div>
+    </div><hr>
+    <div id="controls">
+      <div id="buttons">
+        <button id="startButton">Начать трансляцию</button>
+        <button id="closeButton">Остановить трансляцию</button>
+         
+      </div>
+      <div id="sendReceive">
+        
+        <div id="send">
+          <h2>Текст для отправления</h2>
+          <textarea id="dataChannelSend" disabled placeholder="Нажать Start, ввести текст, нажать Send для отправки."></textarea>
+          <label for="zritel">Зритель</label>
+          <select name="zritel" id="zritel"></select>
+          <button id="sendButton">Отпроавить текст</button>
+          <button id="otkl_zritel">Отключить зрителя</button>
+        </div>
+        <div id="receive">
+          <h2>Полученный текст</h2>
+          <textarea id="dataChannelReceive" disabled></textarea>
+        </div>
+      </div>
+      <div id="data">
+        <h2>Отправить аватар</h2>
+        <input type="file" name="file" id="inputFile" disabled>
+        <h2>Log</h2>
+        <textarea id="dataAll" disabled></textarea>
+      </div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.1.4/adapter.min.js" integrity="sha512-FZkQmTcqSzV2aNpWszYA/pPUISx6QjI60lKGwnIsfNFCGqUB7gcobQ9StH3hQCKFN92md3fCaXLzzSpoFat57A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script> -->
+  <script src="broadcaster/js/main.js" async></script>
+</body>
+</html>
